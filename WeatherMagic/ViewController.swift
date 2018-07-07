@@ -41,7 +41,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func didTapSettingsButton(_ sender: UIBarButtonItem) {
-        print("FGHJ")
+        let storyboard = UIStoryboard(name: "Settings", bundle: nil)
+        let destinationViewController = storyboard.instantiateViewController(withIdentifier: "SettingsTVC") as! SettingsTableViewController
+        let destinationNavigationController = UINavigationController(rootViewController: destinationViewController)
+        destinationNavigationController.addDoneButton()
+        navigationController?.present(destinationNavigationController, animated: true, completion: nil)
     }
     
 
