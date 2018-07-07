@@ -76,6 +76,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E52FB9C920F0CD42001A8FF8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E561B68220D653FE00779A4E /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E52FB9CB20F0CECA001A8FF8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E561B68920D6540100779A4E /* LaunchScreen.storyboard */,
+				E561B68420D653FE00779A4E /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		E561B67420D653FE00779A4E = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +118,9 @@
 			isa = PBXGroup;
 			children = (
 				E561B68020D653FE00779A4E /* AppDelegate.swift */,
-				E561B68220D653FE00779A4E /* ViewController.swift */,
-				E561B68420D653FE00779A4E /* Main.storyboard */,
+				E52FB9CB20F0CECA001A8FF8 /* Storyboards */,
+				E52FB9C920F0CD42001A8FF8 /* Controllers */,
 				E561B68720D6540100779A4E /* Assets.xcassets */,
-				E561B68920D6540100779A4E /* LaunchScreen.storyboard */,
 				E561B68C20D6540100779A4E /* Info.plist */,
 			);
 			path = WeatherMagic;
