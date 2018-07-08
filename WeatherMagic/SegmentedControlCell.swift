@@ -11,4 +11,10 @@ import UIKit
 class SegmentedControlCell: UITableViewCell {
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+
+    func reset() {
+        segmentedControl?.removeAllSegments()
+        contentLabel?.text = ""
+    }
 }
