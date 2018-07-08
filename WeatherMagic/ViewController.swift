@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var windSpeed: UILabel!
     @IBOutlet weak var windDirection: UILabel!
     @IBOutlet weak var settingsButton: UIBarButtonItem!
+    @IBOutlet weak var locationsButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     @IBAction func didTapSettingsButton(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard(name: "Settings", bundle: nil)
         let destinationViewController = storyboard.instantiateViewController(withIdentifier: "SettingsTVC") as! SettingsTableViewController
@@ -48,6 +50,12 @@ class ViewController: UIViewController {
         navigationController?.present(destinationNavigationController, animated: true, completion: nil)
     }
     
-
+    @IBAction func didTapLocationsButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Locations", bundle: nil)
+        let destinationViewController = storyboard.instantiateViewController(withIdentifier: "LocationsTVC") as! LocationsTableViewController
+        let destinationNavigationController = UINavigationController(rootViewController: destinationViewController)
+        navigationController?.present(destinationNavigationController, animated: true, completion: nil)
+    }
+    
 }
 

@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		E51D753620F0E0A1007BDEBE /* UINavigationControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51D753520F0E0A1007BDEBE /* UINavigationControllerExt.swift */; };
 		E51D753820F0F936007BDEBE /* SegmentedControlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51D753720F0F936007BDEBE /* SegmentedControlCell.swift */; };
+		E51D753A20F1F723007BDEBE /* Locations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51D753920F1F723007BDEBE /* Locations.storyboard */; };
+		E51D753C20F1FFD9007BDEBE /* LocationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51D753B20F1FFD9007BDEBE /* LocationsTableViewController.swift */; };
+		E51D753F20F20688007BDEBE /* LocationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51D753E20F20688007BDEBE /* LocationDTO.swift */; };
+		E51D754220F21200007BDEBE /* WeatherLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51D754120F21200007BDEBE /* WeatherLocationService.swift */; };
+		E51D754420F21818007BDEBE /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51D754320F21818007BDEBE /* LocationCell.swift */; };
 		E54F126B20F0D0A400E3A519 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54F126A20F0D0A400E3A519 /* Settings.storyboard */; };
 		E54F126D20F0D36D00E3A519 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54F126C20F0D36D00E3A519 /* SettingsTableViewController.swift */; };
 		E561B68120D653FE00779A4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E561B68020D653FE00779A4E /* AppDelegate.swift */; };
@@ -41,6 +46,11 @@
 /* Begin PBXFileReference section */
 		E51D753520F0E0A1007BDEBE /* UINavigationControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExt.swift; sourceTree = "<group>"; };
 		E51D753720F0F936007BDEBE /* SegmentedControlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlCell.swift; sourceTree = "<group>"; };
+		E51D753920F1F723007BDEBE /* Locations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Locations.storyboard; sourceTree = "<group>"; };
+		E51D753B20F1FFD9007BDEBE /* LocationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsTableViewController.swift; sourceTree = "<group>"; };
+		E51D753E20F20688007BDEBE /* LocationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDTO.swift; sourceTree = "<group>"; };
+		E51D754120F21200007BDEBE /* WeatherLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLocationService.swift; sourceTree = "<group>"; };
+		E51D754320F21818007BDEBE /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		E54F126A20F0D0A400E3A519 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		E54F126C20F0D36D00E3A519 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		E561B67D20D653FE00779A4E /* WeatherMagic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherMagic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,11 +94,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E51D753D20F2066C007BDEBE /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				E51D753E20F20688007BDEBE /* LocationDTO.swift */,
+			);
+			name = DTO;
+			sourceTree = "<group>";
+		};
+		E51D754020F211DA007BDEBE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E51D754120F21200007BDEBE /* WeatherLocationService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		E52FB9C920F0CD42001A8FF8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				E561B68220D653FE00779A4E /* ViewController.swift */,
 				E54F126C20F0D36D00E3A519 /* SettingsTableViewController.swift */,
+				E51D753B20F1FFD9007BDEBE /* LocationsTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -100,6 +127,8 @@
 				E561B68420D653FE00779A4E /* Main.storyboard */,
 				E54F126A20F0D0A400E3A519 /* Settings.storyboard */,
 				E51D753720F0F936007BDEBE /* SegmentedControlCell.swift */,
+				E51D753920F1F723007BDEBE /* Locations.storyboard */,
+				E51D754320F21818007BDEBE /* LocationCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -137,6 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				E561B68020D653FE00779A4E /* AppDelegate.swift */,
+				E51D754020F211DA007BDEBE /* Services */,
+				E51D753D20F2066C007BDEBE /* DTO */,
 				E54F126E20F0E03100E3A519 /* Extensions */,
 				E52FB9CB20F0CECA001A8FF8 /* View */,
 				E52FB9C920F0CD42001A8FF8 /* Controllers */,
@@ -273,6 +304,7 @@
 				E561B68820D6540100779A4E /* Assets.xcassets in Resources */,
 				E561B68620D653FE00779A4E /* Main.storyboard in Resources */,
 				E54F126B20F0D0A400E3A519 /* Settings.storyboard in Resources */,
+				E51D753A20F1F723007BDEBE /* Locations.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,8 +330,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E561B68320D653FE00779A4E /* ViewController.swift in Sources */,
+				E51D754220F21200007BDEBE /* WeatherLocationService.swift in Sources */,
 				E51D753820F0F936007BDEBE /* SegmentedControlCell.swift in Sources */,
+				E51D753C20F1FFD9007BDEBE /* LocationsTableViewController.swift in Sources */,
+				E51D753F20F20688007BDEBE /* LocationDTO.swift in Sources */,
 				E51D753620F0E0A1007BDEBE /* UINavigationControllerExt.swift in Sources */,
+				E51D754420F21818007BDEBE /* LocationCell.swift in Sources */,
 				E561B68120D653FE00779A4E /* AppDelegate.swift in Sources */,
 				E54F126D20F0D36D00E3A519 /* SettingsTableViewController.swift in Sources */,
 			);

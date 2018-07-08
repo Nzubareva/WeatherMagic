@@ -144,13 +144,13 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sunset:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAM-ZM-y6O">
-                                                                        <rect key="frame" x="30" y="0.0" width="58" height="20"/>
+                                                                        <rect key="frame" x="30" y="0.0" width="195.5" height="20"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sunset Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGx-Jl-thD">
-                                                                        <rect key="frame" x="98" y="0.0" width="237" height="20"/>
+                                                                        <rect key="frame" x="235.5" y="0.0" width="99.5" height="20"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -228,13 +228,13 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Pressure:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDC-36-eIj" userLabel="Pressure Note Label">
-                                                                        <rect key="frame" x="30" y="0.0" width="72" height="20"/>
+                                                                        <rect key="frame" x="30" y="0.0" width="227" height="20"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2943 psi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6g-Ec-u3h" userLabel="Pressure Label">
-                                                                        <rect key="frame" x="112" y="0.0" width="223" height="20"/>
+                                                                        <rect key="frame" x="267" y="0.0" width="68" height="20"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -264,13 +264,13 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Wind speed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7D-ym-PjX" userLabel="Wind Speed Note Label">
-                                                                        <rect key="frame" x="30" y="0.0" width="96" height="20.5"/>
+                                                                        <rect key="frame" x="30" y="0.0" width="231.5" height="20.5"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="63 km/h" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLC-HJ-fnn" userLabel="Wind Speed Label">
-                                                                        <rect key="frame" x="136" y="0.0" width="199" height="20.5"/>
+                                                                        <rect key="frame" x="271.5" y="0.0" width="63.5" height="20.5"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -288,13 +288,13 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Wind Direction:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2A-2K-bwF" userLabel="Wind Direction Note Label">
-                                                                        <rect key="frame" x="30" y="0.0" width="259" height="20"/>
+                                                                        <rect key="frame" x="30" y="0.0" width="117.5" height="20"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="190°" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2z-nw-d7a" userLabel="Wind Direction Label">
-                                                                        <rect key="frame" x="299" y="0.0" width="36" height="20"/>
+                                                                        <rect key="frame" x="157.5" y="0.0" width="177.5" height="20"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -345,7 +345,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Hfq-Yw-9Dq">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="lBN-66-baz"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="VerticalArrow" id="lBN-66-baz">
+                            <connections>
+                                <action selector="didTapLocationsButton:" destination="BYZ-38-t0r" id="MDx-Si-a6l"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Settings button" image="SettingsButton" id="Xdh-lo-F8E">
                             <connections>
                                 <action selector="didTapSettingsButton:" destination="BYZ-38-t0r" id="nam-Li-cMf"/>
@@ -356,6 +360,7 @@
                         <outlet property="DayTime" destination="e9Q-cm-kWg" id="cNR-jf-6Xg"/>
                         <outlet property="cloudCover" destination="uAk-va-dJE" id="1Uw-cW-igF"/>
                         <outlet property="humidity" destination="QI6-lV-ejq" id="EhS-he-KkL"/>
+                        <outlet property="locationsButton" destination="lBN-66-baz" id="tC3-qT-wqP"/>
                         <outlet property="pressure" destination="J6g-Ec-u3h" id="38c-VX-HkC"/>
                         <outlet property="settingsButton" destination="Xdh-lo-F8E" id="fmc-pV-w82"/>
                         <outlet property="sunrise" destination="8Yc-BF-bo1" id="9Zj-zt-ehh"/>
@@ -394,6 +399,7 @@
         <image name="SettingsButton" width="25" height="25"/>
         <image name="Sunrice" width="25" height="25"/>
         <image name="Sunset" width="25" height="25"/>
+        <image name="VerticalArrow" width="22" height="22"/>
         <image name="WindDirection" width="25" height="25"/>
         <image name="WindSpeed" width="25" height="25"/>
     </resources>
