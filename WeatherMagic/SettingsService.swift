@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class SettingsService {
+    private static let apiKey = "de1429e5676cc5fbae11d0209ea90faa"
     public static var shared: SettingsService!
     
     private init () {
@@ -20,6 +21,10 @@ class SettingsService {
         if shared == nil {
             shared = SettingsService()
         }
+    }
+    
+    func getApiKey() -> String {
+        return SettingsService.apiKey
     }
     
     // MARK: service methods

@@ -22,7 +22,3 @@ struct LocationDTO {
     }
 }
 
-struct Coordinates {
-    var latitude: Double
-    var longitude: Double
-}

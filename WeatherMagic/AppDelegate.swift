@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         WeatherLocationService.instantiateSharedInstance()
         SettingsService.instantiateSharedInstance()
+        ConversionService.instantiateSharedInstance()
         return true
     }
 
