@@ -14,7 +14,7 @@ class SegmentedControlCell: UITableViewCell {
     
 
     func reset() {
-        segmentedControl?.removeAllSegments()
-        contentLabel?.text = ""
+        segmentedControl.removeAllSegments()
+        contentLabel.text = ""
     }
 }

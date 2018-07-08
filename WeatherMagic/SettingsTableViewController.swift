@@ -33,51 +33,45 @@ class SettingsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SegmentedControlCell", for: indexPath) as! SegmentedControlCell
+            cell.reset()
             if indexPath.row == 0 {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "SegmentedControlCell", for: indexPath) as! SegmentedControlCell
-                cell.reset()
                 cell.contentLabel.text = "Temperature"
                 cell.segmentedControl.insertSegment(withTitle: "ºC", at: 0, animated: true)
                 cell.segmentedControl.insertSegment(withTitle: "ºF", at: 1, animated: true)
-                return cell
+                cell.segmentedControl.selectedSegmentIndex = UserDefaults.standard.integer(forKey: kTemperature)
+                cell.segmentedControl.addTarget(SettingsService.shared, action: #selector(SettingsService.didTempretureUnitsChanged(_:)), for: .valueChanged)
             }
             if indexPath.row == 1 {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "SegmentedControlCell", for: indexPath) as! SegmentedControlCell
-                cell.reset()
                 cell.contentLabel.text = "Wind speed"
                 cell.segmentedControl.insertSegment(withTitle: "km/h", at: 0, animated: true)
                 cell.segmentedControl.insertSegment(withTitle: "mph", at: 1, animated: true)
                 cell.segmentedControl.insertSegment(withTitle: "m/s", at: 2, animated: true)
-                return cell
+                cell.segmentedControl.selectedSegmentIndex = UserDefaults.standard.integer(forKey: kWindSpeed)
+                cell.segmentedControl.addTarget(SettingsService.shared, action: #selector(SettingsService.didWindSpeedUnitsChanged(_:)), for: .valueChanged)
             }
             if indexPath.row == 2 {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "SegmentedControlCell", for: indexPath) as! SegmentedControlCell
-                cell.reset()
                 cell.contentLabel.text = "Pressure"
                 cell.segmentedControl.insertSegment(withTitle: "mm", at: 0, animated: true)
                 cell.segmentedControl.insertSegment(withTitle: "mbar", at: 1, animated: true)
                 cell.segmentedControl.insertSegment(withTitle: "inches", at: 2, animated: true)
-                return cell
+                cell.segmentedControl.selectedSegmentIndex = UserDefaults.standard.integer(forKey: kPressure)
+                cell.segmentedControl.addTarget(SettingsService.shared, action: #selector(SettingsService.didPressureUnitsChanged(_:)), for: .valueChanged)
             }
             if indexPath.row == 3 {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "SegmentedControlCell", for: indexPath) as! SegmentedControlCell
-                cell.reset()
                 cell.contentLabel.text = "Precipitation"
                 cell.segmentedControl.insertSegment(withTitle: "mm", at: 0, animated: true)
                 cell.segmentedControl.insertSegment(withTitle: "inches", at: 1, animated: true)
-                return cell
+                cell.segmentedControl.selectedSegmentIndex = UserDefaults.standard.integer(forKey: kPrecipitation)
             }
             if indexPath.row == 4 {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "SegmentedControlCell", for: indexPath) as! SegmentedControlCell
-                cell.reset()
                 cell.contentLabel.text = "Visibility"
                 cell.segmentedControl.insertSegment(withTitle: "km", at: 0, animated: true)
                 cell.segmentedControl.insertSegment(withTitle: "miles", at: 1, animated: true)
-                return cell
+                cell.segmentedControl.selectedSegmentIndex = UserDefaults.standard.integer(forKey: kVisibility)
+                cell.segmentedControl.addTarget(SettingsService.shared, action: #selector(SettingsService.didVisibilityUnitsChanged(_:)), for: .valueChanged)
             }
-            else {
-                return UITableViewCell()
-            }
+            return cell
         default:
             return UITableViewCell()
         }

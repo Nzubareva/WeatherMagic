@@ -11,6 +11,8 @@ import Foundation
 class WeatherLocationService {
     public static var shared: WeatherLocationService!
     
+    private var currentLocation: LocationDTO?
+    
     private init() {
         
     }
@@ -25,6 +27,10 @@ class WeatherLocationService {
     func storedLocations() -> [LocationDTO] {
         let minsk = LocationDTO(identifier: 625144, name: "Minsk", country: "BY", coordinates: Coordinates(latitude: 53.9, longitude: 27.56))
         return [minsk]
+    }
+    
+    func getCurrentLocation() -> LocationDTO {
+        return currentLocation ?? LocationDTO(identifier: 625144, name: "Minsk", country: "BY", coordinates: Coordinates(latitude: 53.9, longitude: 27.56))
     }
     
 }
