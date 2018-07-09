@@ -56,4 +56,43 @@ class ConversionService {
             return "❓"
         }
     }
+    
+    func temperatureDisplay(_ weather: WeatherDTO) -> String {
+        let kelvins = weather.atmosphericInformation.temperatureKelvin
+        guard let units = Temperature(rawValue: UserDefaults.standard.integer(forKey: kTemperature)) else {
+            return "\(kelvins) K"
+        }
+        switch units {
+        case .celsius:
+            return "\(String(format:"%.0f", kelvins - 273.15))°C"
+        case .farenheight:
+            return "\(String(format:"%.0f", kelvins * (9/5) - 459.67))°F"
+        }
+    }
+    
+    func pressureDisplay(_ weather: WeatherDTO) -> String {
+        let mBar = weather.atmosphericInformation.pressurePsi
+        let units = Pressure(rawValue: UserDefaults.standard.integer(forKey: kPressure)) ?? .mbar
+        switch units {
+        case .mm:
+            return "\(String(format: "%.0f", mBar / 1.33322387415)) mm"
+        case .mbar:
+            return "\(String(format: "%.0f", mBar)) mBar"
+        case .inches:
+            return "\(String(format: "%.0f", mBar * 0.02953)) inches"
+        }
+    }
+    
+    func windSpeedDisplay(_ weather: WeatherDTO) -> String {
+        let ms = weather.windInformation.windspeed
+        let units = WindSpeed(rawValue: UserDefaults.standard.integer(forKey: kWindSpeed)) ?? .meterpersecond
+        switch units {
+        case .kmperhour:
+            return "\(String(format: "%.0f", ms * 3.6)) km/h"
+        case .mlperhour:
+            return "\(String(format: "%.0f", ms * 2.23694)) miles/h"
+        case .meterpersecond:
+            return "\(String(format: "%.0f", ms)) m/s"
+        }
+    }
 }

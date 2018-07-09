@@ -45,7 +45,6 @@ class ViewController: UIViewController {
         self.windDirection.text = "направление ветра"
         
         // Do any additional setup after loading the view, typically from a nib.
-        reloadUI()
     }
     
     func reloadUI() {
@@ -53,7 +52,10 @@ class ViewController: UIViewController {
             self.updateUIwithWeather(weather)
         }
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        reloadUI()
+    }
     private func updateUIwithWeather(_ weatherDTO: WeatherDTO?) {
         guard let weather = weatherDTO else {
             return
@@ -61,15 +63,17 @@ class ViewController: UIViewController {
         weatherConditionLabel.text = ConversionService.shared.weatherConditionSymbol(weather.weatherCondition[0].identifier)
         conditionLabel.text = weather.weatherCondition[0].conditionName
         conditionDescriptionLabel.text = weather.weatherCondition[0].conditionDescription
-        temperatureLabel.text = String(weather.atmosphericInformation.temperatureKelvin)
-        self.DayTime.text = dateFormatter.string(from: Date(timeIntervalSince1970: weather.time))
-        self.sunrise.text = dateFormatter.string(from: Date(timeIntervalSince1970: weather.sysInformation.sunrise))
-        self.sunset.text = dateFormatter.string(from: Date(timeIntervalSince1970: weather.sysInformation.sunset))
-        self.cloudCover.text = "\(Int(weather.cloudCoverage.coverage))%"
-        self.humidity.text = "\(Int(weather.atmosphericInformation.humidity))%"
-        self.pressure.text = "\(weather.atmosphericInformation.pressurePsi)"
-        self.windSpeed.text = "\(weather.windInformation.windspeed)"
-        self.windDirection.text = "\(weather.windInformation.degrees)º"
+        temperatureLabel.text = ConversionService.shared.temperatureDisplay(weather)
+        DayTime.text = dateFormatter.string(from: Date(timeIntervalSince1970: weather.time))
+        sunrise.text = dateFormatter.string(from: Date(timeIntervalSince1970: weather.sysInformation.sunrise))
+        sunset.text = dateFormatter.string(from: Date(timeIntervalSince1970: weather.sysInformation.sunset))
+        cloudCover.text = "\(Int(weather.cloudCoverage.coverage))%"
+        humidity.text = "\(Int(weather.atmosphericInformation.humidity))%"
+        pressure.text = ConversionService.shared.pressureDisplay(weather)
+        windSpeed.text = ConversionService.shared.windSpeedDisplay(weather)
+        windDirection.text = "\(String(format: "%.0f", weather.windInformation.degrees))º"
+        let cityBarButtonItem = navigationItem.leftBarButtonItems?[1]
+        cityBarButtonItem?.title = "\(weather.cityName), \(weather.sysInformation.country)"
     }
     
     override func didReceiveMemoryWarning() {

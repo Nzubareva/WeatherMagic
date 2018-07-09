@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -180,13 +181,13 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cloud Cover:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clk-4t-aF0" userLabel="Cloud Cover Note Stack View">
-                                                                        <rect key="frame" x="30" y="0.0" width="99" height="20"/>
+                                                                        <rect key="frame" x="30" y="0.0" width="261.5" height="20"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="70%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAk-va-dJE" userLabel="Cloud Cover Stack View">
-                                                                        <rect key="frame" x="139" y="0.0" width="196" height="20"/>
+                                                                        <rect key="frame" x="301.5" y="0.0" width="33.5" height="20"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -204,13 +205,13 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Humidity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qko-Rl-I79" userLabel="Humidity Note Label">
-                                                                        <rect key="frame" x="30" y="0.0" width="73.5" height="20"/>
+                                                                        <rect key="frame" x="30" y="0.0" width="260.5" height="20"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="23%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QI6-lV-ejq" userLabel="Humidity Label">
-                                                                        <rect key="frame" x="113.5" y="0.0" width="221.5" height="20"/>
+                                                                        <rect key="frame" x="300.5" y="0.0" width="34.5" height="20"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -264,13 +265,13 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Wind speed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7D-ym-PjX" userLabel="Wind Speed Note Label">
-                                                                        <rect key="frame" x="30" y="0.0" width="96" height="20.5"/>
+                                                                        <rect key="frame" x="30" y="0.0" width="231.5" height="20.5"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="63 km/h" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLC-HJ-fnn" userLabel="Wind Speed Label">
-                                                                        <rect key="frame" x="136" y="0.0" width="199" height="20.5"/>
+                                                                        <rect key="frame" x="271.5" y="0.0" width="63.5" height="20.5"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -345,11 +346,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Hfq-Yw-9Dq">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="VerticalArrow" id="lBN-66-baz">
-                            <connections>
-                                <action selector="didTapLocationsButton:" destination="BYZ-38-t0r" id="MDx-Si-a6l"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem title="Item" image="VerticalArrow" id="lBN-66-baz">
+                                <connections>
+                                    <action selector="didTapLocationsButton:" destination="BYZ-38-t0r" id="MDx-Si-a6l"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="City" id="gbw-wp-oLW"/>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="Settings button" image="SettingsButton" id="Xdh-lo-F8E">
                             <connections>
                                 <action selector="didTapSettingsButton:" destination="BYZ-38-t0r" id="nam-Li-cMf"/>
