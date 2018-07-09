@@ -35,12 +35,16 @@ class LocationsTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath) as! LocationCell
             cell.reset()
             cell.contentLabel.text = "\(location.name), \(location.country)"
+            if location.identifier == WeatherLocationService.shared.getCurrentLocation().identifier {
+                cell.selectedLabel.text = "☼"
+            }
             return cell
         }
         return UITableViewCell()
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        WeatherLocationService.shared.updateCurrentLocation(WeatherLocationService.shared.storedLocations()[indexPath.row])
         self.dismiss(animated: true, completion: nil)
     }
 }

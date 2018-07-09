@@ -167,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				E561B68220D653FE00779A4E /* ViewController.swift */,
-				E51D754320F21818007BDEBE /* LocationCell.swift */,
 				E54F126C20F0D36D00E3A519 /* SettingsTableViewController.swift */,
 				E51D753B20F1FFD9007BDEBE /* LocationsTableViewController.swift */,
 			);
@@ -181,6 +180,7 @@
 				E561B68420D653FE00779A4E /* Main.storyboard */,
 				E54F126A20F0D0A400E3A519 /* Settings.storyboard */,
 				E51D753720F0F936007BDEBE /* SegmentedControlCell.swift */,
+				E51D754320F21818007BDEBE /* LocationCell.swift */,
 				E51D753920F1F723007BDEBE /* Locations.storyboard */,
 			);
 			name = View;

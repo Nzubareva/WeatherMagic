@@ -10,8 +10,10 @@ import UIKit
 
 class LocationCell: UITableViewCell {
     @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var selectedLabel: UILabel!
     
     func reset() {
         contentLabel.text = ""
+        selectedLabel.text = ""
     }
 }
